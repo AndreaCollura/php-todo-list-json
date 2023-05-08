@@ -1,0 +1,57 @@
+/* :root{
+    
+} */
+
+
+.debug{
+    border: 1px solid red;
+}
+
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+}
+
+.wrapper{
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    margin: 120px auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    max-height: 500px;
+    overflow: hidden;
+
+}
+
+.list-box{
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+
+#title{
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Delicious Handrawn', cursive;; 
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    background-image: linear-gradient(to left, #9a3c5d, #d39593);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Delicious Handrawn', cursive;; 
+    display: flex;
+    justify-content: center;
+}
+
