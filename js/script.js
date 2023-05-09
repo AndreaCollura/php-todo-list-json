@@ -25,7 +25,7 @@ createApp({
             const element = {
                 newListEle: {
                     text: this.newListEle,
-                    done: false,
+                    /* done: false, */
                 },
             };
             axios
@@ -37,6 +37,40 @@ createApp({
                     console.log(res.data);
                     this.shoppingList = res.data;
                 });
+        },
+
+        confirmProduct(index) {
+            const element = {
+                updateElem: index,
+            };
+
+            axios
+                .post(this.apiUrl, element, {
+                    headers: { "Content-Type": "multipart/form-data" },
+                })
+                .then((res) => {
+                    console.log(res.data);
+                    this.shoppingList = res.data;
+                });
+
+            this.shoppingList[index].done = !this.shoppingList[index].done;
+        },
+
+        deleteProduct(index) {
+            const element = {
+                deleteElem: index,
+            };
+
+            axios
+                .post(this.apiUrl, element, {
+                    headers: { "Content-Type": "multipart/form-data" },
+                })
+                .then((res) => {
+                    console.log(res.data);
+                    this.shoppingList = res.data;
+                });
+
+            
         },
     },
     mounted() {

@@ -28,7 +28,7 @@
                     <ul class="list-group" v-if="shoppingList.length > 0 ">
                         <li class=" d-flex justify-content-between" v-for="(product, index) in shoppingList" @click="confirmProduct(index)" :class="product.done ? 'alert alert-success': 'alert alert-light'">
                             <span class="fw-bold text-capitalize">{{product.text}}</span>
-                            <button ><i class="fa-solid fa-trash-can"></i></button>
+                            <button @click.stop="deleteProduct(index)" ><i class="fa-solid fa-trash-can"></i></button>
                         </li>
                     </ul>
                     <div v-else class="d-flex flex-column">
